@@ -1,1 +1,1 @@
-web: gunicorn umamedical.wsgi 
+web: gunicorn mac.wsgi --log-file -
