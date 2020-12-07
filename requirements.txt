@@ -11,8 +11,6 @@ pi==0.1.2
 Pillow==8.0.1
 pycparser==2.20
 pycryptodome==3.4.3
-pycryptodomex==3.9.9
-pycryptosat @ file:///C:/Users/Batukeshwar/Downloads/pycryptosat-0.6.1.1-cp39-cp39-win_amd64.whl
 PyJWT==1.7.1
 pytz==2020.4
 requests==2.25.0
