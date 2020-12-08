@@ -3,7 +3,7 @@ from .models import Product, Contact, Orders, OrderUpdate
 from math import ceil
 import json
 from django.views.decorators.csrf import csrf_exempt
-from PayTm import Checksum
+#from PayTm import Checksum
 # Create your views here.
 from django.http import HttpResponse
 MERCHANT_KEY = 'Your-Merchant-Key-Here'
@@ -125,7 +125,7 @@ def checkout(request):
                 'CALLBACK_URL':'http://127.0.0.1:8000/shop/handlerequest/',
 
         }
-        param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict, MERCHANT_KEY)
+        #param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict, MERCHANT_KEY)
         return render(request, 'shop/paytm.html', {'param_dict': param_dict})
 
     return render(request, 'shop/checkout.html')
@@ -141,8 +141,8 @@ def handlerequest(request):
         if i == 'CHECKSUMHASH':
             checksum = form[i]
 
-    verify = Checksum.verify_checksum(response_dict, MERCHANT_KEY, checksum)
-    if verify:
+    #verify = Checksum.verify_checksum(response_dict, MERCHANT_KEY, checksum)
+    #if verify:
         if response_dict['RESPCODE'] == '01':
             print('order successful')
         else:
