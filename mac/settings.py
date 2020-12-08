@@ -26,7 +26,7 @@ SECRET_KEY = 'jj9a$@*6#$83l@97%^y!jmaw0+8)%o6gd^plt+4^c2@ip#q9#u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '/umamedical.herokuapp.com/']
+ALLOWED_HOSTS = ['umamedical.herokuapp.com','localhost']
 
 # Application definition
 
@@ -115,7 +115,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles'),
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
